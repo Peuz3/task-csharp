@@ -18,7 +18,7 @@ namespace _01_Task
             InitializeComponent();
         }
 
-        //Trabalhando de forma Sincrona
+        //Trabalhando de forma Síncrona
         private void btnBaixar_Click(object sender, EventArgs e)
         {
             string endereco = txtSite.Text;
