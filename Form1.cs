@@ -18,17 +18,17 @@ namespace _01_Task
             InitializeComponent();
         }
 
-        //Trabalhando de forma Síncrona
-        private void btnBaixar_Click(object sender, EventArgs e)
+        //Trabalhando de forma assíncrona
+        private async void btnBaixar_Click(object sender, EventArgs e)
         {
             string endereco = txtSite.Text;
 
             WebClient web = new WebClient();
-            string html = web.DownloadString(endereco);
+            
+          
+           string html =  await web.DownloadStringTaskAsync(new Uri(endereco));
 
             txtResultado.Text = html;
-
-
         }
     }
 }
